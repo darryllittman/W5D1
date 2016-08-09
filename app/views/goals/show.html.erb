@@ -1,0 +1,8 @@
+<%= @goal.title %>
+<%= @goal.description %>
+<%= "status: #{@goal.status}" %>
+<%= @goal.private %>
+
+<% if @goal.status == "completed" %>
+  <%= button_to "Delete Goal", goal_url(@goal), method: :delete %>
+<% end %>
